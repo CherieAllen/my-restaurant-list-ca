@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import { initializeApp } from "firebase/app";
 import { Button, Form, Input } from "antd";
 import {getAuth, signInWithEmailAndPassword, GoogleAuthProvider,signInWithPopup} from "firebase/auth"
+import { UserContext } from "../App";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAxoGD5BbJFR6tiv4bXVU8VHVhZ20gx2BU",
@@ -12,7 +14,8 @@ const firebaseConfig = {
 };
 
 
-export default function Login({setUser}) {
+export default function Login() {
+    const {setUser} =useContext(UserContext)
     const handleLogin =({email, password})=> {
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
