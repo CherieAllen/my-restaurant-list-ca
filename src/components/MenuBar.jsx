@@ -24,10 +24,7 @@ export default function MenuBar() {
       key="random"
       icon={<QuestionCircleOutlined style={{ fontSize: "1.8em" }} />}
     />
-    <Menu.Item
-      key="login" onClick={() => navigate('/login')}
-      icon={<UserOutlined style={{ fontSize: "1.8em" }} />}
-    />
+
   </Menu>
 
     )
